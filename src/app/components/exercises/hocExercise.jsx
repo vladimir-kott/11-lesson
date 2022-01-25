@@ -1,8 +1,17 @@
 import React from "react";
 import CollapseWrapper from "../common/collapse";
+import SimpleComponent from "./simpleComponent";
+import withPropsStyles from "../examples/hoc/withPropsStyles"
+
 
 const HocExercise = () => {
+    
+    const simpleComponentR = SimpleComponent()
+    const WithPropsStylesR = withPropsStyles()
+    const RenderSimpleComponent = WithPropsStylesR(simpleComponentR)
+
     return (
+        <>
         <CollapseWrapper title="Упражнение">
             <p className="mt-3">
                 Вам необходимо реализовать компонент{" "}
@@ -48,6 +57,8 @@ const HocExercise = () => {
                 </li>
             </ul>
         </CollapseWrapper>
+        <SimpleComponent ></SimpleComponent>
+        </>
     );
 };
 
