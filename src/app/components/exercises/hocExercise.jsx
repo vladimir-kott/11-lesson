@@ -3,7 +3,6 @@ import CollapseWrapper from "../common/collapse";
 import SimpleComponent from "./simpleComponent";
 import withPropsStyles from "../examples/hoc/withPropsStyles"
 
-
 const HocExercise = () => {
     
     const simpleComponentR = SimpleComponent()

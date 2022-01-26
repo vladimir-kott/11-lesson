@@ -1,5 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CollapseWrapper from "../common/collapse";
+import PropTypes from "prop-types";
+
+const FormComponent = ({ children }) => {
+  
+    return React.Children.map(children, (child) => {
+      
+      return <h1>1</h1> + React.cloneElement(child);
+    });
+  };
+  FormComponent.propTypes = {
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
+    ])
+  };
+
+
 const ChildrenExercise = () => {
     return (
         <CollapseWrapper title="Упражнение">
@@ -10,10 +27,11 @@ const ChildrenExercise = () => {
                 <code>React.Children.map</code> так и{" "}
                 <code>React.Children.toArray</code>
             </p>
-
-            <Component />
-            <Component />
-            <Component />
+            <FormComponent>
+                <Component />
+                <Component />
+                <Component />
+            </FormComponent>
         </CollapseWrapper>
     );
 };
