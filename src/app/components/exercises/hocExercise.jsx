@@ -2,12 +2,13 @@ import React from "react";
 import CollapseWrapper from "../common/collapse";
 import SimpleComponent from "./simpleComponent";
 import withPropsStyles from "../examples/hoc/withPropsStyles"
+import CardWrapper from "../../components/common/Card";
 
 const HocExercise = () => {
     
     const simpleComponentR = SimpleComponent()
     const WithPropsStylesR = withPropsStyles()
-    const RenderSimpleComponent = WithPropsStylesR(simpleComponentR)
+    const RenderSimpleComponent = WithPropsStylesR(simpleComponentR) 
 
     return (
         <>
@@ -56,7 +57,9 @@ const HocExercise = () => {
                 </li>
             </ul>
         </CollapseWrapper>
-        <SimpleComponent ></SimpleComponent>
+        <CardWrapper>
+            <SimpleComponent ></SimpleComponent>
+        </CardWrapper>
         </>
     );
 };

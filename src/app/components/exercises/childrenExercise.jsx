@@ -12,7 +12,7 @@ const FormComponent = ({ children }) => {
   FormComponent.propTypes = {
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node
+      PropTypes.node 
     ])
   };
 
