@@ -3,11 +3,13 @@ import CollapseWrapper from "../common/collapse";
 import PropTypes from "prop-types";
 
 const FormComponent = ({ children }) => {
-  
-    return React.Children.map(children, (child) => {
-      
-      return <h1>1</h1> + React.cloneElement(child);
-    });
+      return(
+        <ol>
+        {React.Children.map(children, (child) => {
+          return <li>{React.cloneElement(child)}</li>
+        })}
+        </ol>
+      )
   };
   FormComponent.propTypes = {
     children: PropTypes.oneOfType([
