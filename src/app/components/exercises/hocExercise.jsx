@@ -58,7 +58,7 @@ const HocExercise = () => {
             </ul>
         </CollapseWrapper>
         <CardWrapper>
-            <SimpleComponent ></SimpleComponent>
+            <SimpleComponent></SimpleComponent>
         </CardWrapper>
         </>
     );
