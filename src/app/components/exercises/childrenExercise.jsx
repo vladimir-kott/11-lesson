@@ -4,11 +4,9 @@ import PropTypes from "prop-types";
 
 const FormComponent = ({ children }) => {
       return(
-        <ol>
-        {React.Children.map(children, (child) => {
-          return <li>{React.cloneElement(child)}</li>
-        })}
-        </ol>
+        React.Children.map(children, (child, index) => {
+          return React.cloneElement(child, [++index])
+        })
       )
   };
   FormComponent.propTypes = {
@@ -38,8 +36,8 @@ const ChildrenExercise = () => {
     );
 };
 
-const Component = () => {
-    return <div>Компонент списка</div>;
+const Component = (index) => {
+    return <div>{index[0]} Компонент списка</div>;
 };
 
 export default ChildrenExercise;
